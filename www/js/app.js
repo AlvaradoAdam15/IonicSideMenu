@@ -67,7 +67,27 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'PlaylistCtrl'
       }
     }
-  });
+  })
+      .state('app.helloworld', {
+        url: '/helloworld',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/helloworld.html',
+            controller: ''
+          }
+        }
+      })
+
+      .state('app.otherexample', {
+        url: '/otherexample',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/otherexample.html',
+            controller: ''
+          }
+        }
+      })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
